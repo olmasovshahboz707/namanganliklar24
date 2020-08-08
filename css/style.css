@@ -1,0 +1,519 @@
+/* able of contents */
+/* 1. FONT */
+/* 2. GENIRAL STYLES */
+/* 3. CONTAINER */
+/* 4. SITE-HEADER   */
+/* 5. LOGO */
+/* 6. EXCHANGE-RATES */
+/* 7. SEARCH-BUTTON */
+/* 8. LANGUAGE-TOGGLER */
+/* 9. TELEGRAM-SUB  */
+/* 10. SITENAV */
+/* 11. TOP-BANNER */
+/* SITE-FOOTER */
+/* MEDIA QUERIES */
+/* KEYFRAMES */
+/* FONTS */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:  url('../webfonts/rubik-v9-latin-regular.woff2') format('woff2'), 
+  url('../webfonts/rubik-v9-latin-regular.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:  url('../webfonts/Rubik-Medium.woff2') format('woff2'), 
+  url('../webfonts/Rubik-Medium.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:  url('../webfonts/rubik-v9-latin-700.woff2') format('woff2'), 
+  url('../webfonts/rubik-v9-latin-700.woff') format('woff'); 
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:  url("../webfonts/roboto-v20-latin-regular.woff2") format("woff2"),
+  url("../webfonts/roboto-v20-latin-regular.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src:  url("../webfonts/roboto-v20-latin-italic.woff2") format("woff2"),
+  url("../webfonts/roboto-v20-latin-italic.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src:  url("../webfonts/roboto-v20-latin-500.woff2") format("woff2"),
+  url("../webfonts/roboto-v20-latin-500.woff") format("woff");
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src:  url("../webfonts/roboto-v20-latin-500italic.woff2") format("woff2"),
+  url("../webfonts/roboto-v20-latin-500italic.woff") format("woff");
+}
+/* GENIRAL STYLES */
+html {
+  box-sizing: border-box;
+  height: 100%;   
+}
+*,
+*::before,
+*::after  {
+  box-sizing: inherit;
+}
+body{
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  color: #434343;
+}
+*:focus {
+  outline: 0;
+  box-shadow: 0 0 0 4px rgba(41, 80, 147, 0.4);
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+/* CONTAINER */
+.container{
+  max-width: 1240px;
+  padding: 0 20px;
+  margin: 0px auto;
+}
+/* SITE-HEADER */
+.site-header{
+  padding-top: 40px;
+  padding-bottom: 23px;
+  border-top: 4px solid #295093;
+  background-color: #f6f6f9;
+}
+.site-header__top{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 19px;
+}
+.site-header__logo{
+  margin-right: 17px;
+}
+.site-header__exchange-rates{
+  margin-left: 17px;
+}
+.site-header__actions{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+.site-header__search-button{
+  margin-right: 22px;
+}
+.site-header__language-toggler{
+  margin-right: 24px;
+}
+.site-header__toggler{
+  display: none;
+}
+/* LOGO */
+.logo{
+  display: flex;
+  border-radius: 5px;
+  padding: 4px 8px;
+  background-color: #fff;
+  box-shadow: 0px 2px 6px rgba(202, 202, 202, 0.25);
+  transition: transform 0.3s ease;
+}
+.logo:hover {
+  transform: scale(1.025);
+}
+.logo:focus{
+  box-shadow: 0 0 0 4px rgba(41, 80, 147, 0.4);
+}
+/* EXCHANGE-RATES */
+.exchange-rates{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  color: #7a7a7a;
+}
+.exchange-rates__item:not(:last-child){
+  margin-right: 26px;
+}
+.exchange-rates__icon{
+  color: #285193;
+}
+/* SEARCH-BUTTON */
+.search-button{
+  padding: 0;
+  border: none;
+  background-color: #fff; 
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.search-button_wrapper{
+  padding: 8px;      
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/* LANGUAGE-TOGGLER */
+.language-toggler{
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+.language-toggler__wrapper{
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+.language-toggler__img{
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-origin: 50%;
+}
+.search-button:hover,
+.language-toggler:hover{
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+/* TELEGRAM-SUB */
+.telegram-sub{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+}
+.telegram-sub--dark{
+  color: #fff;
+  background-color: #1e96c8;
+  background-image: linear-gradient(90deg, #1e96c8 15.07%, #37aee2 96%);
+}
+.telegram-sub:hover{
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+.telegram-sub--dark:hover{
+  background-color: #1e96c8;
+  background-image: linear-gradient(90deg, #37aee2 15.07%, #1e96c8 96%);
+}
+.telegram-sub--white{
+  background-color: #fff;
+  color: #295093;
+}
+.telegram-sub__img{
+  margin-right: 7px;
+}
+.telegram-sub__text{
+  font-weight: 500;
+}
+/* SITENAV */
+.sitenav{
+  margin-bottom: 18px;
+  background-color: #fff;
+  border-radius: 5px;
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(159, 159, 159, 0.19);
+}
+.sitenav__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 17px 12px;
+  margin: 0;
+  list-style-type: none;
+}
+.sitenav__item{
+  margin: 5px 12px;
+}
+.sitenav__link{
+  display: block;
+  color: #515151;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.sitenav__link:hover{
+  color: #295091;
+}
+/* TOP-BANNER */
+.top-banner{
+  display: flex;
+}
+/* SITE-FOOTER */
+.site-footer{
+  padding: 18px 0;
+  font-size: 14px;
+  line-height: 17px;
+  background-color: #295093;
+  color: #fff;
+}
+.site-footer *:focus{
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.4);
+}
+.site-footer__top{
+  display: flex;
+  align-items: center;
+}
+.site-footer__logo {
+  flex-shrink: 0;
+  display: flex;
+  margin-right: auto;
+  border-right: 5px;
+}
+.site-footer__sub-text{
+  margin: 0;
+  margin-right: 17px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.site-footer__telegram-sub{
+  flex-shrink: 0;
+}
+.site-footer__divider{
+  height: 3px;
+  border: none;
+  margin-top: 18px;
+  margin-bottom: 12px;
+  background-color: #133c82;
+}
+.site-footer__bottom{
+  display: flex;
+  flex-wrap: wrap;
+}
+.site-footer__about{
+  max-width: 365px;
+  margin-right: 110px;
+}
+.site-footer__heading{
+  margin-top: 0;
+  font-size: 14px;
+  line-height: 17px;
+}
+.site-footer__nav{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 520px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.site-footer__nav-item{
+  width: 50%;
+  margin-bottom: 10px;
+  padding-right: 15px;
+}
+.site-footer__nav-link{
+  display: inline-block;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+.site-footer__nav-link:hover{
+  text-decoration: underline;
+}
+/* MEDIA QUERIES */
+@media (max-width: 1060px){
+  .site-footer__about,
+  .site-footer__nav{
+    max-width: 100%;
+    width: 50%;
+    margin-right: 0;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 1000px){
+  .site-header{
+    padding-top: 20px;
+  }
+  .site-header__top{
+    align-items: stretch;
+  }
+  .site-header__logo{
+    margin-right: 0;
+  }
+  .exchange-rates{
+    order: -1;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 850px){
+  .site-header__top{
+    margin-bottom: 20px;
+  }
+  .exchange-rates{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .sitenav{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .sitenav__item{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .site-footer__about,
+  .site-footer__nav{
+    width: 100%;
+  }
+  .site-footer__about{
+    order: 1;
+  }
+  .site-footer__nav{
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 750px){
+  .page__body{
+    margin-top: 82px;
+  }
+  .site-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%; 
+    padding: 20px 0;
+  }
+  .site-header__top{
+    margin-bottom: 0;
+  }
+  .site-header__toggler{
+    position: relative;
+    z-index: 20;
+    display: block;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(202, 202, 202, 0.25);
+    transition: box-shadow 0.3s ease; 
+  }
+  .site-header__toggler{
+    box-shadow: 0 0 0 4px rgba(41, 80, 147, 0.4);
+  }
+  .exchange-rates,
+  .search-button,
+  .language-toggler,
+  .site-header__telegram-sub{
+    display: none;
+  }
+  .sitenav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    width: 65%;
+    margin-bottom: 0;
+    transform: translateX(0);
+    border-radius: 0;
+    box-shadow: -10px 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    transform: translateX(120%);
+    animation: sitenav-slide-out 0.3s linear 1 forwards;
+    display: none;
+  }
+  .sitenav--open{
+    display: block;
+    animation: sitenav-slide-in 0.3s linear 1 forwards;
+  }
+  .sitenav__list{
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 20px;
+    padding-top: 82px;
+  }
+  .sitenav__item{
+    width: 100%;
+    margin: 0 5px;
+  }
+  .sitenav__item:not(:last-child){
+    border-bottom: 1px solid #515151;
+  }
+  .sitenav__link{
+    padding: 10px 20px;
+    text-align: right;
+    transition: color 0.3s ease,
+      background-color 0.3s ease;
+  }
+  .sitenav__link:active{
+    background-color: #295091;
+    color: #fff;
+  }
+  .top-banner{
+    display: none;
+  }
+  .site-footer__top{
+    flex-wrap: wrap;
+  }
+  .site-footer__sub-text{
+    order: 1;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+    margin-right: 0;
+    text-align: right;
+  }
+}
+@media (max-width: 500px){
+  .logo__img{
+    width: 220px;
+  }
+  .sitenav{
+    width: 80%;
+  }
+}
+/* KEYFRAMES */
+@keyframes sitenav-slide-out{
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(120%);
+  }
+}
+@keyframes sitenav-slide-in{
+  from{
+    transform: translateX(120%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
