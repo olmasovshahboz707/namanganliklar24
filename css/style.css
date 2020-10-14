@@ -81,7 +81,7 @@ html {
   box-sizing: inherit;
 }
 body{
-  display: none;
+  display: flex;
   flex-direction: column;
   height: 100%;     
   font-family: "Rubik", "Arial", sans-serif;
