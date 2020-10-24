@@ -684,6 +684,37 @@ img{
   width: 100%;
   height: 100%;
 }
+/* SITE-APP */
+.site-app {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 65px 20px 65px 240px;
+  background: #f6f6f9 url("../img/phone.png") no-repeat 20px bottom;
+}
+.site-app__body {
+  width: 530px;
+  margin-right: auto;
+}
+.site-app__heading {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #295093;
+}
+.site-app__text {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+  color: #333333;
+}
+.site-app__link {
+  display: flex;
+  border-radius: 5px;
+  margin-left: 20px;
+}
 /* SITE-FOOTER */
 .site-footer {
   padding: 18px 0;
@@ -784,7 +815,21 @@ img{
     font-size: 16px;
   }
 }
-@media (max-width: 1160px){
+@media (max-width: 1200px) {
+  .site-app {
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .site-app__body {
+    width: 100%;
+  }
+  .site-app__link {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 1160px) {
   .covid-info__heading{
     margin-right: 40px;
   }
@@ -797,7 +842,7 @@ img{
     padding-bottom:0 ;
   }
 }
-@media (max-width: 1060px){
+@media (max-width: 1060px) {
   .covid-info{
     flex-wrap: wrap;
     justify-content: center;
@@ -821,7 +866,7 @@ img{
     padding-right: 30px;
   }
 }
-@media (max-width: 1000px){
+@media (max-width: 1000px) {
   .site-header{
     padding-top: 20px;
   }
@@ -843,8 +888,15 @@ img{
   .popular-news__banner {
     width: 100%;
   }
+  .news-list {
+    margin-bottom: 40px;
+  }
+  .sidebar-banner__img {
+    width: 100%;
+    height: auto;
+  }
 }
-@media (max-width: 850px){
+@media (max-width: 850px) {
   .site-header__top{
     margin-bottom: 20px;
   }
@@ -874,6 +926,20 @@ img{
     font-style: 17px;
     line-height: 20px;
   }
+  .site-app {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 180px;
+    background-size: 150px;
+  }
+  .site-app__heading {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .site-app__text {
+    font-size: 16px;
+    line-height: 20px;
+  }
   .site-footer__about,
   .site-footer__nav{
     width: 100%;
@@ -885,7 +951,7 @@ img{
     margin-bottom: 20px;
   }
 }
-@media (max-width: 750px){
+@media (max-width: 750px) {
   .page__body{
     margin-top: 82px;
   }
@@ -982,7 +1048,10 @@ img{
   .covid-info__stat:not(:last-child){
     border-bottom: 2px solid #f4ccd1;
   }
-
+  .site-app {
+    padding: 20px;
+    background-image: none;
+  }
   .site-footer__top{
     flex-wrap: wrap;
     align-items: stretch;
@@ -1010,7 +1079,7 @@ img{
     text-align: center;
   }
 }
-@media (max-width: 550px){
+@media (max-width: 550px) {
   .covid-info:before{
     margin-right: 0;
   }
@@ -1036,22 +1105,25 @@ img{
     margin-top: 5px;
     margin-bottom: 5px;
   }
-  .sidebar-banner__img {
-    width: 100%;
-    height: auto;
-  }
 }
-@media (max-width: 500px){
+@media (max-width: 500px) {
   .logo__img{
     width: 220px;
   }
-  .sitenav{
+  .sitenav {
     width: 80%;
   }
   .notifications__header,
   .notifications__button {
     font-size: 15px;
     line-height: 17px;
+  }
+  .site-app {
+    justify-content: space-around;
+  }
+  .site-app__link {
+    max-width: 45%;
+    margin: 0;
   }
   .site-footer__top{
     flex-direction: column;
